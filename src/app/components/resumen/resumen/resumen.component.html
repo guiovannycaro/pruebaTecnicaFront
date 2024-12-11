@@ -1,0 +1,64 @@
+<app-header></app-header>
+<div id="contenedor">
+  <div id="contenido">
+    <table class="table table-bordered">
+      <tr>
+        <th>Documento</th>
+        <th>Numero</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Edad</th>
+      </tr>
+      <tr>
+        <td>{{ servidata.tipoDocumento }}</td>
+        <td>{{ servidata.numeroDocumento }}</td>
+        <td>{{ servidata.nombre }}</td>
+        <td>{{ servidata.apellido }}</td>
+        <td>{{ servidata.edad }}</td>
+      </tr>
+    </table>
+    <div id="cerrarSeccion">
+      <form (ngSubmit)="onSubmit()">
+        <button type="submit" class="btn btn-primary">Regresar</button>
+      </form>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+<style>
+  #cerrarSeccion {
+    float: left;
+    width: 10%;
+    height: 40px;
+    margin: 1% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+  }
+
+  #contenedor {
+    float: left;
+    width: 80%;
+    height: 400px;
+    padding: 0% 0% 0% 0%;
+    margin: 10% 15% 30% 15% !important;
+    border-radius: 20px;
+    border-color: black;
+    border-style: solid;
+    margin: 1px;
+  }
+
+  #contenido {
+    float: left;
+    width: 90%;
+    height: 335px;
+    padding: 0% 0% 0% 0%;
+    margin: 5% 5% 5% 5% !important;
+  }
+
+  #titulo {
+    float: left;
+    width: 50%;
+    height: 20px;
+    padding: 0% 0% 0% 0%;
+    margin: -3% 0% 6% 29%;
+  }
+</style>

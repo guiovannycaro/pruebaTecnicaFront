@@ -1,0 +1,93 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #25cff2">
+  <a class="navbar-brand" href="#">Prueba Tecnica Guiovanny</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarText"
+    aria-controls="navbarText"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="nav">
+      <li><a href="" routerLink="/home">Home</a></li>
+      <li>
+        <a href="">Administracion<span class="flecha">▼</span></a>
+        <ul>
+          <li class="nav-item">
+            <a href="" class="nav-link" routerLink="/Consulta">Consulta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/Servicio">Servicio</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  #cerrarSeccion {
+    float: left;
+    width: 10%;
+    height: 40px;
+    margin: 1% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+  }
+
+  * {
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav > li {
+    float: left;
+  }
+
+  .nav li a {
+    background: #25cff2;
+    color: #fff;
+    display: block;
+    border: 1px solid;
+    padding: 10px 12px;
+  }
+
+  .nav li a:hover {
+    background: #0fbfc6;
+  }
+
+  .nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 150px;
+  }
+
+  .nav li:hover > ul {
+    display: block;
+  }
+
+  .nav li ul li {
+    position: relative;
+  }
+
+  .nav li ul li ul {
+    right: -150px;
+    top: 0;
+  }
+
+  .nav li .flecha {
+    font-size: 9px;
+    padding-left: 6px;
+    display: none;
+  }
+
+  .nav li a:not(:last-child) .flecha {
+    display: inline;
+  }
+</style>

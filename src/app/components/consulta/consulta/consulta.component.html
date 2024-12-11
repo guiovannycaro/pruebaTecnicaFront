@@ -1,0 +1,97 @@
+<app-header></app-header>
+
+<form [formGroup]="jsonForm" (ngSubmit)="onSubmit()">
+  <div id="contenedor">
+    <div id="contenido">
+      <div class="row">
+        <div class="form-holder">
+          <h3><div id="titulo">Prueba Tecnica Consulta</div></h3>
+          <label class="form-label" for="subtitulo"
+            >Todos Los Campos son Obligatorios *</label
+          >
+        </div>
+      </div>
+
+      <!-- Email input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="tipoDocumento">Tipo de Documento</label>
+        <select
+          class="form-select"
+          id="tipoDocumento"
+          formControlName="tipoDocumento"
+          required
+        >
+          <option value="" selected>Seleccione una opción</option>
+          <option value="CC">Cédula de Ciudadanía</option>
+          <option value="P">Pasaporte</option>
+        </select>
+      </div>
+
+      <!-- Password input -->
+      <div data-mdb-input-init class="form-outline mb-4" placeholder="password">
+        <label class="form-label" for="numeroDocumento"
+          >Numero de Documento</label
+        >
+        <input
+          type="text"
+          id="numDocumento"
+          formControlName="numDocumento"
+          placeholder="Numero De Documento"
+          class="form-control"
+          (input)="formatNumber($event)"
+          required
+        />
+      </div>
+
+      <!-- 2 column grid layout for inline styling -->
+      <div class="row mb-4">
+        <div class="col">
+          <!-- Simple link -->
+        </div>
+        <div class="col">
+          <!-- Submit button -->
+          <button
+            type="submit"
+            data-mdb-button-init
+            data-mdb-ripple-init
+            class="btn btn-primary"
+          >
+            Buscar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<app-footer></app-footer>
+
+<style>
+  #contenedor {
+    float: left;
+    width: 40%;
+    height: 400px;
+    padding: 0% 0% 0% 0%;
+    margin: 10% 15% 30% 30% !important;
+    border-radius: 20px;
+    border-color: black;
+    border-style: solid;
+    margin: 1px;
+  }
+
+  #contenido {
+    float: left;
+    width: 90%;
+    height: 335px;
+    padding: 0% 0% 0% 0%;
+    margin: 5% 5% 5% 5% !important;
+  }
+
+  #titulo {
+    float: left;
+    width: 50%;
+    height: 20px;
+    padding: 0% 0% 0% 0%;
+    margin: -3% 0% 6% 29%;
+  }
+</style>

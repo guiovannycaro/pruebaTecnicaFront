@@ -1,0 +1,18 @@
+[
+
+  {
+    "tipoDocumento": "CC",
+    "numeroDocumento": "123456789",
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "edad": 30
+  },
+  {
+     "tipoDocumento": "P",
+	 "numeroDocumento": "987654321",
+	 "nombre": "María",
+    "apellido": "Garzon",
+	 "edad": 20
+   }
+
+]
